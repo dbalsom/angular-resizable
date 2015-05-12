@@ -1,8 +1,9 @@
 {
-  "name": "angular-resizable",
-  "version": "0.0.0",
-  "homepage": "https://github.com/Reklino/angular-resizable",
+  "name": "angular-resizable-db",
+  "version": "1.0.2",
+  "homepage": "https://github.com/dbalsom/angular-resizable",
   "authors": [
+    "dbalsom",
     "Reklino <yakub89@gmail.com>"
   ],
   "description": "A lightweight directive for creating resizable containers in angularjs",
@@ -11,6 +12,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
+    "npm-debug.log",
     "bower_components",
     "test",
     "tests"

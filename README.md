@@ -1,26 +1,35 @@
-# angular-resizable
-A   directive for creating resizable containers.
+# angular-resizable-db
+A directive for creating resizable elements.
+Based on the angular-resizable directive by Reklino (http://github.com/Reklino/angular-resizable).
 
 ## Why?
-All other resizable directive concepts I came across include layout logic in the directive. I wanted a directive that only handled the resize logic. This way, the layout logic is quarantined to the CSS.
+
+Reklino's original directive was 90% of what I needed, but I didn't want my resize directive to add DOM elements.
+Instead, this version allows the resizing handle element to be specified by a 'handle' attribute.
+The downside is you have to provide your own handle element, but it allows for greater customization.
+
+Additionally, a css style 'resize-handle' is provided that can decorate your handle with pseudo-elements.
 
 ## Usage
 
-1. `bower install angular-resizable`
-2. Include `angluar-resizable.js` in your project.
-3. Include `angluar-resizable.css` in your project as well (this provides default styling for the resize handles).
+1. `bower install angular-resizable-db`. Or don't, because I probably never registered this.
+2. Include `angular-resizable.js` in your project.
+3. Include `angular-resizable.css` in your project if you want to use the grabber decorations
 4. Then include the module in your app: `angular.module('app', ['angularResizable'])`
-5. Use it: `<section resizable r-directions="['bottom', 'right']" r-flex="true">`
 
-Include any sides you want to be resizable in an array inside `r-directions`. Accepts 'top','right','bottom', and 'left'
+5. Apply the resizable attribute to the element you want to resize: `<div resizable>`
+6. Tag the child element you wish to use as the resize grabber, supplying type: '<div handle="bottom|right|bottomright">'
 
-## Options
+## Differences from the original
 
-Attribute | Default | Accepts | Description
---- | --- | --- | ---
-r-directions | ['right'] | ['top', 'right', 'bottom', 'left',] | Determines which sides of the element are resizable.
-r-flex | false | boolean | Set as true if you are using flexbox.[See the example](http://codepen.io/Reklino/pen/raRaXq).
+Directive now requires jQuery, oh dear.
+Flexbox support is removed. I didn't need it, sorry.
+Only right, bottom, and bottomright handles are supported.
 
-## Liscense
+## Example
+
+See the included example.html for some demonstration uses.
+
+## License
 
 MIT
