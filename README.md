@@ -27,7 +27,7 @@ Additionally, a css style `resize-handle` is provided that can decorate your han
 
 ## Example
 
-See the included example.html for some demonstration uses.
+See the included [example.html](http://dbalsom.github.io/angular-resizable/) for some demonstration uses.
 
 ## License
 
